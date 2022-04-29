@@ -1,6 +1,6 @@
-# eslint-plugin-export-default-last
+# @exodus/eslint-plugin-export-default
 
-rr
+checks if default export is last line in the file
 
 ## Installation
 
@@ -13,17 +13,17 @@ npm i eslint --save-dev
 Next, install `@exodus/eslint-plugin-export-default-last`:
 
 ```sh
-npm install eslint-plugin-export-default-last --save-dev
+yarn add -D @exodus/eslint-plugin-export-default-last
 ```
 
 ## Usage
 
-Add `export-default-last` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Add `@exodus/eslint-plugin-export-default` to the plugins section of your `.eslintrc` configuration file.
 
 ```json
 {
     "plugins": [
-        "export-default-last"
+        "@exodus/eslint-plugin-export-default"
     ]
 }
 ```
@@ -34,7 +34,7 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "eslint-plugin-export-default-last/default-last": 2
+        "@exodus/export-default/last": "error"
     }
 }
 ```
