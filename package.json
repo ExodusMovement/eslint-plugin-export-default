@@ -1,0 +1,21 @@
+{
+  "name": "@exodus/eslint-plugin-export-default",
+  "version": "1.0.0",
+  "description": "eslint plugin to make sure default export is last",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "author": "egor",
+  "main": "lib/index.js",
+  "license": "ISC",
+  "scripts": {
+    "test": "node test/index.test.js",
+    "prepublish": "yarn test"
+  },
+  "devDependencies": {
+    "eslint": "^8.14.0"
+  },
+  "files": ["lib", "README.md", "package.json"]
+}
