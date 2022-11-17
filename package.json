@@ -7,9 +7,9 @@
     "eslintplugin",
     "eslint-plugin"
   ],
-  "author": "egor",
+  "author": "Exodus Movement, Inc.",
   "main": "lib/index.js",
-  "license": "ISC",
+  "license": "MIT",
   "scripts": {
     "test": "node test/index.test.js",
     "prepublish": "yarn test"
