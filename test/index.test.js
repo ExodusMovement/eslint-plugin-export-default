@@ -1,16 +1,18 @@
-const fs = require('fs')
-const path = require('path')
-const { RuleTester } = require('eslint')
+import fs  from 'fs'
+import path  from 'path'
+import { RuleTester } from 'eslint'
+import plugin from '../lib/index.js'
+
 const ruleTester = new RuleTester({
-  'parserOptions': {
+  languageOptions: {
     sourceType: 'module',
     ecmaVersion: 9,
-  }
+  },
 })
-
 
 const readFile = filePath => fs.readFileSync(filePath, 'utf-8')
 
+const __dirname = path.dirname(new URL(import.meta.url).pathname)
 
 const testLastRule = () => {
   const examplesPath = path.resolve(__dirname, 'examples')
@@ -20,7 +22,7 @@ const testLastRule = () => {
   const invalidFixed = readFile(path.resolve(examplesPath, 'invalid-fixed.js'))
   const invalid2 = readFile(path.resolve(examplesPath, 'invalid-2.js'))
   const invalid2Fixed = readFile(path.resolve(examplesPath, 'invalid-2-fixed.js'))
-  const rule = require('../lib/index').rules['last']
+  const rule = plugin.rules['last']
 
   ruleTester.run('last', rule, {
     valid: [
@@ -50,7 +52,8 @@ const testNamedRule = () => {
   const invalidFunc = readFile(path.resolve(namedRuleExamples, 'invalid-function.js'))
   const validConst = readFile(path.resolve(namedRuleExamples, 'valid-constant.js'))
   const validFunc = readFile(path.resolve(namedRuleExamples, 'valid-function.js'))
-  const rule = require('../lib/index').rules['named']
+  const rule = plugin.rules['named']
+
   ruleTester.run('named', rule, {
     valid: [
       {
@@ -74,3 +77,4 @@ const testNamedRule = () => {
 }
 
 testNamedRule()
+testLastRule()

@@ -1,6 +1,7 @@
 {
   "name": "@exodus/eslint-plugin-export-default",
-  "version": "1.0.0",
+  "version": "2.0.0",
+  "type": "module",
   "description": "eslint plugin to make sure default export is last and have declared variable name",
   "keywords": [
     "eslint",
@@ -15,7 +16,7 @@
     "prepublish": "yarn test"
   },
   "devDependencies": {
-    "eslint": "^8.14.0"
+    "eslint": "^9.9.1"
   },
   "files": ["lib", "README.md", "package.json"]
 }

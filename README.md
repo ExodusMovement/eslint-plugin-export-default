@@ -10,20 +10,20 @@ You'll first need to install [ESLint](https://eslint.org/):
 npm i eslint --save-dev
 ```
 
-Next, install `@exodus/eslint-plugin-export-default-last`:
+Next, install `@exodus/eslint-plugin-export-default`:
 
 ```sh
-yarn add -D @exodus/eslint-plugin-export-default-last
+yarn add -D @exodus/eslint-plugin-export-default
 ```
 
 ## Usage
 
-Add `@exodus/eslint-plugin-export-default` to the plugins section of your `.eslintrc` configuration file.
+Add `@exodus/eslint-plugin-export-default` to the plugins section of your `eslint.config.js` configuration file.
 
-```json
+```js
 {
     "plugins": [
-        "@exodus/eslint-plugin-export-default"
+        "export-default": "@exodus/eslint-plugin-export-default"
     ]
 }
 ```
@@ -31,7 +31,7 @@ Add `@exodus/eslint-plugin-export-default` to the plugins section of your `.esli
 
 Then configure the rules you want to use under the rules section.
 
-```json
+```js
 {
     "rules": {
         "@exodus/export-default/last": "error",
@@ -39,4 +39,3 @@ Then configure the rules you want to use under the rules section.
     }
 }
 ```
-
