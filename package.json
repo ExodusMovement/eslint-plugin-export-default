@@ -1,6 +1,6 @@
 {
   "name": "@exodus/eslint-plugin-export-default",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "type": "module",
   "description": "eslint plugin to make sure default export is last and have declared variable name",
   "keywords": [
